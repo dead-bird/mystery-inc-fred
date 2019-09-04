@@ -1,0 +1,7 @@
+[
+  {
+    "slug": "unique-slug-per-item",
+    "text": "Text to be tweeted",
+    "tweeted": false
+  }
+]
