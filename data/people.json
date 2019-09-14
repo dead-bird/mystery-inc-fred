@@ -1,12 +1,12 @@
 [
   {
-    "slug": "this-bot",
     "text": "@MysteryIncFred",
+    "type": "people",
     "tweeted": true
   },
   {
-    "slug": "donald-trump",
     "text": "Donald Trump",
+    "type": "people",
     "tweeted": false
   }
 ]

@@ -9,24 +9,31 @@ const fred = data.fred();
 
 console.log('I think node sucks');
 
-scheduleJob(cron, async () => {
-  let media = '';
-  let item = '';
+data
+  .get()
+  .then(d => {
+    console.log(d);
+  })
+  .catch(e => console.log(e));
 
-  try {
-    media = await client.post('media/upload', { media: fred });
-    item = await data.get();
-  } catch (e) {
-    throw e;
-  }
+// scheduleJob(cron, async () => {
+//   let media = '';
+//   let item = '';
 
-  const status = {
-    status: `I think ${item.text} sucks`,
-    media_ids: media.media_id_string,
-  };
+//   try {
+//     media = await client.post('media/upload', { media: fred });
+//     item = await data.get();
+//   } catch (e) {
+//     throw e;
+//   }
 
-  client
-    .post('statuses/update', status)
-    .then(() => data.set(item))
-    .catch(e => console.log(e));
-});
+//   const status = {
+//     status: `I think ${item.text} sucks`,
+//     media_ids: media.media_id_string,
+//   };
+
+//   client
+//     .post('statuses/update', status)
+//     .then(() => data.set(item))
+//     .catch(e => console.log(e));
+// });
